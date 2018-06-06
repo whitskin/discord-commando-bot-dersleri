@@ -9,7 +9,7 @@ const client = new CommandoClient({
     commandPrefix: ayarlar.PREFIX,
     unknownCommandResponse: false,
     owner: ayarlar.SAHIP,
-    disableEveryone: true
+    disableEveryone: false
 });
 
 client.registry
