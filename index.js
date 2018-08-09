@@ -3,7 +3,7 @@ path = require('path'),
 moment = require('moment'),
 sqlite = require('sqlite');
 
-const ayarlar = require('./data/ayarlar.json');
+const ayarlar = require('./ayarlar.json');
 
 const client = new CommandoClient({
     commandPrefix: ayarlar.PREFIX,
@@ -22,7 +22,7 @@ client.registry
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()
-    .registerCommandsIn(path.join(__dirname, 'commands'));
+    .registerCommandsIn(path.join(__dirname, 'komutlar'));
 
 	sqlite.open(path.join(__dirname, "database.sqlite3")).then((db) => {
 		client.setProvider(new SQLiteProvider(db));
